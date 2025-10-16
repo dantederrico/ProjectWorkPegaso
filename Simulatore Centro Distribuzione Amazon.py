@@ -3,7 +3,7 @@ Simulatore di packing
 # - 5 fasi: Picking, Qualità, Imballaggio, Etichettatura, Smistamento
 # - Pipeline con code per fase × tipologia + worker (thread)
 # - KPI stampati a fine run
-# - NOVITÀ: export locale opzionale in JSON + TXT per analisi offline
+# - Export locale opzionale in JSON + TXT per analisi offline
 # - Opzionale: pandas/matplotlib per piccola analisi/grafici (se installati)
 
 import threading

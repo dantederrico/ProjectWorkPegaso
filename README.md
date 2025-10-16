@@ -15,10 +15,9 @@ Il simulatore modella le diverse fasi di lavorazione (Picking, Controllo qualit�
 - Librerie opzionali (per funzionalità avanzate): pandas, matplotlib (installabili con `pip install pandas matplotlib`)
 
 ## Come eseguire il simulatore
-1. Aprire un terminale nella cartella del progetto.
-2. Eseguire il comando:
-3. Seguire le istruzioni a schermo per inserire i parametri di simulazione.
-4. I risultati vengono mostrati in output e, se disponibile, viene generata un’analisi grafica.
+1. Eseguire il codice con VSC o ide Python.
+2. Seguire le istruzioni a schermo per inserire i parametri di simulazione.
+3. I risultati vengono mostrati in output e, se disponibile, viene generata un’analisi grafica.
 
 ## Note
 - La simulazione è uno strumento didattico e sperimentale, non un modello completamente fedele alla realtà produttiva.

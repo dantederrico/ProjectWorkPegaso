@@ -16,7 +16,8 @@ Il simulatore modella le diverse fasi di lavorazione (Picking, Controllo qualitÃ
 
 ## Come eseguire il simulatore
 1. Aprire un terminale nella cartella del progetto.
-2. Eseguire il comando:3. Seguire le istruzioni a schermo per inserire i parametri di simulazione.
+2. Eseguire il comando:
+3. Seguire le istruzioni a schermo per inserire i parametri di simulazione.
 4. I risultati vengono mostrati in output e, se disponibile, viene generata unâ€™analisi grafica.
 
 ## Note

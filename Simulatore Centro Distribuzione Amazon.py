@@ -1,4 +1,4 @@
-2# Simulatore di packing (derivato dal tuo 'produzione.py')
+Simulatore di packing 
 # - 3 tipologie: Cuffie Bluetooth, Tablet, Stampante
 # - 5 fasi: Picking, Qualità, Imballaggio, Etichettatura, Smistamento
 # - Pipeline con code per fase × tipologia + worker (thread)

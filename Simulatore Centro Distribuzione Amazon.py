@@ -1,4 +1,4 @@
-# Simulatore di packing
+# Simulatore settore secondario
 # - 3 tipologie: Cuffie Bluetooth, Tablet, Stampante
 # - 5 fasi: Picking, Qualità, Imballaggio, Etichettatura, Smistamento
 # - Pipeline con code per fase × tipologia + worker (thread)

@@ -1,32 +1,62 @@
-# Simulatore Processo di Packing - Centro Amazon
+# Simulatore Processo di Packing – Settore Elettronico
 
 ## Descrizione
-Questo progetto contiene un simulatore in Python che riproduce il processo di packing di ordini in un centro logistico Amazon.  
-Il simulatore modella le diverse fasi di lavorazione (Picking, Controllo qualità, Imballaggio, Etichettatura, Smistamento) per vari tipi di prodotti (cuffie Bluetooth, tablet, stampanti) e consente di analizzare tempi, volumi e probabilità di rilavorazione.
 
-## Funzionalità principali
-- Simulazione multithread delle fasi produttive con code dedicate
-- Parametri configurabili: numero ordini, tempi di lavorazione, rework, ecc.
-- Calcolo di indicatori di performance (KPI) come lead time e tasso di rilavorazione
-- Supporto opzionale per analisi dati con pandas e matplotlib (se installati)
+Questo progetto contiene un **simulatore in Python** che riproduce il processo di **packing** di prodotti elettronici in un’azienda manifatturiera del **settore secondario**.
+
+Il modello considera tre tipologie di prodotto:
+
+- Cuffie Bluetooth  
+- Tablet  
+- Stampante  
+
+e cinque fasi operative in serie:
+
+1. Picking  
+2. Controllo qualità  
+3. Imballaggio  
+4. Etichettatura  
+5. Smistamento  
+
+La simulazione è pensata come **simulazione a eventi discreti semplificata**: ogni ordine attraversa tutte le fasi in sequenza e i **tempi di lavorazione** sono gestiti tramite un **orologio simulato interno**, distinto dal tempo reale di esecuzione del programma. Questo permette di calcolare KPI come **lead time** e **makespan** sul solo tempo del modello, in coerenza con l’impostazione teorica del project work.
+
+---
+
+## Caratteristiche principali
+
+- ✔️ Simulazione del processo di packing con tre tipologie di prodotto e cinque fasi in serie  
+- ✔️ Parametri configurabili da riga di comando:
+  - numero di ordini per tipologia (min/max),
+  - range dei tempi di lavorazione (secondi simulati),
+  - probabilità di rework,
+  - fattore di velocità (*time scale*) per la visualizzazione  
+- ✔️ Modellazione della variabilità:
+  - tempi estratti in modo stocastico,
+  - rework probabilistico con ritardo extra
+- ✔️ Gestione del flusso con **code FIFO** e worker (thread) per fase×tipologia
+- ✔️ Calcolo dei principali **KPI operativi** sul **tempo simulato**:
+  - lead time per ordine,
+  - lead time medio/mediano complessivo,
+  - lead time medio per tipologia,
+  - makespan simulato del lotto
+- ✔️ **Export locale opzionale** in:
+  - JSON (per analisi con pandas / Excel),
+  - TXT (report sintetico leggibile)
+- ✔️ Supporto opzionale per analisi e grafici con **pandas** e **matplotlib** (se installati)
+
+---
 
 ## Requisiti
+
 - Python 3.x
-- Librerie opzionali (per funzionalità avanzate): pandas, matplotlib (installabili con `pip install pandas matplotlib`)
+- Librerie standard (già incluse in Python):  
+  `threading`, `queue`, `time`, `random`, `json`, `os`, `datetime`, `statistics`
+- Librerie opzionali (per analisi e grafici):
+  - `pandas`
+  - `matplotlib`
 
-## Come eseguire il simulatore
-1. Eseguire il codice con VSC o ide Python.
-2. Seguire le istruzioni a schermo per inserire i parametri di simulazione.
-3. I risultati vengono mostrati in output e, se disponibile, viene generata un’analisi grafica.
+Installabili, se desiderato, con:
 
-## Note
-- La simulazione è uno strumento didattico e sperimentale, non un modello completamente fedele alla realtà produttiva.
-- È possibile estendere e personalizzare il codice per adattarlo a scenari specifici o integrare servizi cloud per gestione dati.
+```bash
+pip install pandas matplotlib
 
----
-
-Per qualsiasi domanda o chiarimento, sono disponibile a fornire supporto.
-
----
-
-Buona esplorazione del progetto!
